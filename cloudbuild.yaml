@@ -4,6 +4,5 @@ steps:
 - name: mirror.gcr.io/golang
   env:
   - GO111MODULE=on
-  args: ['go','get','-u','github.com/golang/glog']
 - name: 'ubuntu'
   args: ['sh', './cb_test.sh']
