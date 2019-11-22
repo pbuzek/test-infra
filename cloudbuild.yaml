@@ -1,3 +1,5 @@
 steps:
+- name: 'gcr.io/cloud-builders/go'
+  args: ['install', '.']
 - name: 'ubuntu'
   args: ['sh', './cb_test.sh']
