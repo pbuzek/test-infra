@@ -1,3 +1,4 @@
 #!/bin/sh
-mkdir knative.dev
-ls | grep -v knative.dev | xargs mv -t knative.dev
+mkdir -p src/knative.dev
+ls | grep -v src | xargs mv -t src/knative.dev
+cd src/knative.dev/test-infra
