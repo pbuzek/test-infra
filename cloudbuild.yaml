@@ -1,6 +1,7 @@
 steps:
 steps:
 - name: gcr.io/cloud-builders/wget
+  args: ['--help']
 - name: 'ubuntu'
   args: ['sh', './cb_setup.sh']
 - name: mirror.gcr.io/golang
