@@ -1,8 +1,12 @@
 steps:
 - name: 'ubuntu'
   args: ['sh', './cb_setup.sh']
-- name: 'gcr.io/cloud-builders/go'
-  args: ['install', '.']
-  env: ['PROJECT_ROOT=knative.dev/test-infra']
+- name: mirror.gcr.io/golang
+  env:
+  - GO111MODULE=on
+  args: ['go','get','-u','github.com/golang/glog']
+  volumes:
+  - name: go-modules
+    path: /go
 - name: 'ubuntu'
   args: ['sh', './cb_test.sh']
