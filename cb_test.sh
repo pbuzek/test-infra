@@ -1,12 +1,15 @@
 #!/bin/sh
 
 bash --version
-pwd
-ls
-ls ..
 # mkdir -p knative.dev
 # mv github.com/adrcunha/test-infra knative.dev
 # cd knative.dev/test-infra
+mkdir knative.dev
+shopt -s extglob dotglob
+mv !(knative.dev) knative.dev
+cd knative.dev/test-infra
+pwd
+
 # if [[ -z "$(which ko)" ]]; then GO111MODULE=on go get github.com/google/ko/cmd/ko ; fi
 # if [[ -z "$(which kail)" ]]; then GO111MODULE=on go get github.com/boz/kail/cmd/kail ; fi
 # if [[ -z "$(which dep)" ]]; then go get -u github.com/golang/dep/cmd/dep ; fi
