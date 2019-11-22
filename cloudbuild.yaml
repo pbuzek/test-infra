@@ -3,6 +3,6 @@ steps:
   args: ['sh', './cb_setup.sh']
 - name: 'gcr.io/cloud-builders/go'
   args: ['install', '.']
-  env: ['GOPATH=.']
+  env: ['PROJECT_ROOT=knative.dev/test-infra']
 - name: 'ubuntu'
   args: ['sh', './cb_test.sh']
