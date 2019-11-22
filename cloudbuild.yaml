@@ -1,5 +1,8 @@
 steps:
+- name: 'ubuntu'
+  args: ['sh', './cb_setup.sh']
 - name: 'gcr.io/cloud-builders/go'
   args: ['install', '.']
+  env: ['GOPATH=.']
 - name: 'ubuntu'
   args: ['sh', './cb_test.sh']
