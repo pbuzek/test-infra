@@ -1,3 +1,3 @@
 steps:
 - name: 'ubuntu'
-  args: ['bash', 'ls']
+  args: ['sh', './test/presubmit-tests.sh','--build-tests']
