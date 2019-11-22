@@ -1,3 +1,3 @@
 #!/bin/sh
 mkdir knative.dev
-mv * knative.dev
+ls | grep -v knative.dev | xargs mv -t knative.dev
