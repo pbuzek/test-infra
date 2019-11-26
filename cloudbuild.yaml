@@ -1,11 +1,4 @@
 steps:
-steps:
 #- name: gcr.io/cloud-builders/wget
 #  args: ['--help']
-- name: 'ubuntu'
-  args: ['sh', './cb_setup.sh']
-- name: mirror.gcr.io/golang
-  env:
-  - GO111MODULE=on
-- name: 'ubuntu'
-  args: ['sh', './cb_test.sh']
+- name: 'gcr.io/cb-poc-knative/knative-test'
