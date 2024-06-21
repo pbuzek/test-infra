@@ -1,0 +1,4 @@
+steps:
+#- name: gcr.io/cloud-builders/wget
+#  args: ['--help']
+- name: 'gcr.io/cb-poc-knative/knative-test'
